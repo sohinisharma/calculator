@@ -33,6 +33,7 @@ const Calculator = () => {
         setResult((prevDisplay) => prevDisplay + keyPressed);
       } else if (keyPressed === 'Escape') {
         
+        
         setResult('');
       } else if (keyPressed === 'Enter') {
         
@@ -42,6 +43,10 @@ const Calculator = () => {
         } catch (error) {
           setResult('Error');
         }
+      }
+      else if (keyPressed === 'Backspace') { 
+        setResult((prevDisplay) => prevDisplay.slice(0, -1));
+      
       }
     };
     
@@ -60,9 +65,7 @@ const Calculator = () => {
         <input type="text" placeholder="0" className='answer' value={result}/>          
         <input type="button" className='btn' value="clr" onClick={clearDisplay}/>
         <input type="button" className='btn' value="0" onClick={clickHandler}/>
-        <input type="button" className='btn' value=">" onClick={backSpace}/>
-        
-     
+        <input type="button" className='btn' value="back" onClick={backSpace}/>
         <input type="button" className='btn' value="/" onClick={clickHandler}/>
         <input type="button" className='btn' value="7" onClick={clickHandler}/>
         <input type="button" className='btn' value="8" onClick={clickHandler}/>
