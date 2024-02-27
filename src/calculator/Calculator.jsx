@@ -62,7 +62,7 @@ const Calculator = () => {
       <>
     <div className='container-area'>
     <div className='container'>
-        <input type="text" placeholder="0" className='answer' value={result}/>          
+        <input type="text" placeholder="0" className='answer' defaultValue={result}/>          
         <input type="button" className='btn' value="clr" onClick={clearDisplay}/>
         <input type="button" className='btn' value="0" onClick={clickHandler}/>
         <input type="button" className='btn' value="back" onClick={backSpace}/>
